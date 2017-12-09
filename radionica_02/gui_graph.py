@@ -41,7 +41,7 @@ class MainWindow(QtGui.QMainWindow):
         # 1) Nadi u Device manager-u ili u Arduino IDE-u i provjeri na koji serijski port je spojen Arduino
         # 2) Pogledaj u kod-u koji je programiran na Arduino na kojem baudrate-u se događa komunikacija
         # #self.ser = serial.Serial(IME PORTa, BAUDRATE)
-        # !!!! dodati citanje podataka
+        # 3) u funkciji "updater" umjesto uzimanja random podataka uzimajte podatke sa serijskog porta
 
         ############ TRECE ####################
         ######## Omoguciti spremanje grafa
