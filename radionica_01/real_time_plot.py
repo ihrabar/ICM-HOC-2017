@@ -30,7 +30,6 @@ p.showGrid(x=True, y=True)
 ser = serial.Serial("COM34", 115200) #'/dev/ttyACM0'
 print("connected to: " + ser.portstr)
 # flush any junk left in the serial buffer
-ser.flushInput()
 ser.reset_input_buffer()
 
 start = time.time()

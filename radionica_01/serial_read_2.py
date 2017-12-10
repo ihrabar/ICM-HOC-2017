@@ -13,7 +13,6 @@ recording_period=0.2 # in seconds
 ser = serial.Serial("COM38", 115200) #'/dev/ttyACM0'
 print("connected to: " + ser.portstr)
 # flush any junk left in the serial buffer
-ser.flushInput()
 ser.reset_input_buffer()
 
 start = time.time()
