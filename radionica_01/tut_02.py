@@ -29,7 +29,7 @@ t=np.linspace(0,100,1000)
 x=5*t
 y=3*t
 p4 = win.addPlot(title="Multiple curves - lines")
-p4.addLegend(size=(0, 30), offset=(10, 10))
+p4.addLegend(size=(30, 30), offset=(10, 10))
 p4.plot(x, pen=(255,0,0), name="Slope 5")
 p4.plot(y, pen=(0,255,0), name="Slope 3")
 p4.showGrid(x=True, y=True)

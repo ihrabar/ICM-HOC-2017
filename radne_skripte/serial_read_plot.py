@@ -27,9 +27,9 @@ plotting_flag=True
 def main():
 	global plotting_flag
 	while plotting_flag==True:
-		#data = ser.readline().decode().split('\r\n') # testirati samo sa ser.read() data = ser.read().decode()
+		#data = ser.readline().decode().split('\r\n') 
 		data=np.random.random_integers(1,1000,size=1)
-		data_scale=float(data[0])*5.0/1024  # dal data od 0 ili samo data?
+		data_scale=float(data[0])*5.0/1024  
 		current_time=time.time()-start
 		print(str(current_time) + ": " + str(data_scale))
 		#appending to the data input deques 	

@@ -25,12 +25,13 @@ p = win.addPlot(title="Serial input plot")
 p.setLabel( 'left', text="Serial value", units="V")
 p.setLabel( 'bottom', text="Time", units="sec")
 p.showGrid(x=True, y=True)
+p.setYRange(0,5)
 
 # check the Arduino IDE to see what serial port it's attached to
-ser = serial.Serial("COM34", 115200) #'/dev/ttyACM0'
-print("connected to: " + ser.portstr)
+#ser = serial.Serial("COM34", 115200) #'/dev/ttyACM0'
+#print("connected to: " + ser.portstr)
 # flush any junk left in the serial buffer
-ser.reset_input_buffer()
+#ser.reset_input_buffer()
 
 start = time.time()
 
@@ -53,14 +54,14 @@ def main():
 		p.plot(data_time, data_volt, pen=(0,0,255))
 		#plot_data=data_volt[-plot_data_nr:]
 		#plot_time=data_time[-plot_data_nr:]
-		#p.plot(plot_time, plot_data, pen=(0,0,255))
+		p.plot(plot_time, plot_data, pen=(0,0,255))
 		app.processEvents()
 
 		if (current_time>recording_time):
 			plotting_flag=False
 		time.sleep(recording_period)
 
-	ser.close()
+	#ser.close()
 	status = app.exec_()
 	sys.exit(status)
 		

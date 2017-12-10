@@ -1,9 +1,8 @@
 import sys
-import pyqtgraph as pg
-from PyQt5 import QtGui, QtCore, uic
+from PyQt5 import QtGui, QtCore, uic, QtWidgets
  
 
-class MainWindow(QtGui.QMainWindow):
+class MainWindow(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
         super(MainWindow, self).__init__()     	
         #load gui from .ui file
@@ -11,9 +10,7 @@ class MainWindow(QtGui.QMainWindow):
 
 
 if __name__ == '__main__':
-    app = QtGui.QApplication(sys.argv)
+    app = QtWidgets.QApplication(sys.argv)
     w = MainWindow()
     w.show()
     sys.exit(app.exec_())
-
-
